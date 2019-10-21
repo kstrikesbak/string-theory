@@ -49,7 +49,11 @@ function exclaim(str) {
 
 
 function reverse(str) {
-  
+  let newStr= ''
+  for (i=str.length-1;i>-1;i--) {
+    newStr = newStr + str[i]
+  }
+  return newStr
 }
 
 function crazyCase2ReturnOfCrazyCase() {
@@ -81,8 +85,18 @@ function titleCase(str) {
     return newStr;
   }
 
-function onlyVowels() {
-}
+  function onlyVowels(str) {
+    let newStr=''
+    for (i=0;i<str.length;i++){
+      if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
+        newStr = newStr + str[i]
+      }
+      else if (str[i] === 'A' || str[i] === 'E' || str[i] === 'I' || str[i] === 'O' || str[i] === 'U') {
+        newStr = newStr + str[i]
+      }
+    }
+    return newStr
+  }
 
 function crazyCase3SonOfCrazyCase() {
 }
