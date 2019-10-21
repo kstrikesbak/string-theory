@@ -1,5 +1,21 @@
-function crazyCase() {
+function crazyCase(str) {
+
+  let newStr= ''
+  for (i=0;i<str.length;i++) {
+    if (i % 2 ===0) {
+    newStr = newStr + str[i].toLowerCase()
+    } else {
+    newStr = newStr + str[i].toUpperCase()
+    }
+  } 
+  return newStr
 }
+
+const nextCrazyCase = crazyCase('hello')
+console.log(nextCrazyCase);
+
+const theNextCrazyCase = crazyCase('you')
+console.log(theNextCrazyCase);
 
 function ciEmailify() {
 }
