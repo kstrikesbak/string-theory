@@ -56,17 +56,42 @@ function reverse(str) {
   return newStr
 }
 
-function crazyCase2ReturnOfCrazyCase() {
+// function crazyCase2ReturnOfCrazyCase(str) {
 
-  let newStr= ''
-  for (i=0;i<str.length;i++) {
-    if (i % 2 ===0 && str[i]!==" ") {
-    newStr = newStr + str[i].toLowerCase()
-    } else if (str[i] ===" "){
-    newStr = newStr + str[i].toUpperCase()
+//   let newStr= ''
+//   str = str.toLowerCase()
+//   let counter = 0
+//   for (i=0;i<counter.length;i++) {
+//     if (str[i] ===" ") {
+//     newStr = newStr + " "
+//     } else if (i % 2 ===0) {
+//     newStr = newStr + str[i].toLowerCase()
+//     } else {
+//     newStr = newStr + str[i].toUpperCase()
+//     } 
+//   } 
+//   return newStr
+// }
+
+// console.log(crazyCase2ReturnOfCrazyCase("multiple words here"))
+
+function crazyCase2ReturnOfCrazyCase(str) {
+  let newStr = '';
+  let counter = 0;
+  str = str.toLowerCase();
+
+  for (let i = 0; i < str.length; i++) {
+    if(counter % 2 === 0) {
+      newStr = newStr + str[i];
+    } else {
+      newStr = newStr + str[i].toUpperCase();
     }
-  } 
-  return newStr
+
+    if(str[i] !==  ' ') {
+      counter++;
+    }
+  }
+  return newStr;
 }
 
 function titleCase(str) {
@@ -85,13 +110,23 @@ function titleCase(str) {
     return newStr;
   }
 
+  // function onlyVowels(str) {
+  //   let newStr=''
+  //   for (i=0;i<str.length;i++){
+  //     if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
+  //       newStr = newStr + str[i]
+  //     }
+  //     else if (str[i] === 'A' || str[i] === 'E' || str[i] === 'I' || str[i] === 'O' || str[i] === 'U') {
+  //       newStr = newStr + str[i]
+  //     }
+  //   }
+  //   return newStr
+  // }
+
   function onlyVowels(str) {
     let newStr=''
     for (i=0;i<str.length;i++){
-      if (str[i] === 'a' || str[i] === 'e' || str[i] === 'i' || str[i] === 'o' || str[i] === 'u') {
-        newStr = newStr + str[i]
-      }
-      else if (str[i] === 'A' || str[i] === 'E' || str[i] === 'I' || str[i] === 'O' || str[i] === 'U') {
+      if ('aeiouAEIOU'.includes(str[i])) {
         newStr = newStr + str[i]
       }
     }
