@@ -48,14 +48,38 @@ function exclaim(str) {
 
 
 
-function reverse() {
+function reverse(str) {
+  
 }
 
 function crazyCase2ReturnOfCrazyCase() {
+
+  let newStr= ''
+  for (i=0;i<str.length;i++) {
+    if (i % 2 ===0 && str[i]!==" ") {
+    newStr = newStr + str[i].toLowerCase()
+    } else if (str[i] ===" "){
+    newStr = newStr + str[i].toUpperCase()
+    }
+  } 
+  return newStr
 }
 
-function titleCase() {
-}
+function titleCase(str) {
+  let newStr= ''
+  for (i=0;i<str.length;i++){
+  if(i == 0){
+    newStr = newStr + str[0].toUpperCase()
+  }else{
+  if (str[i-1] === ' ') {
+  newStr = newStr + str[i].toUpperCase()}
+  else {
+  newStr = newStr + str[i].toLowerCase()
+    }
+    }
+  }
+    return newStr;
+  }
 
 function onlyVowels() {
 }
