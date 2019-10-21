@@ -17,10 +17,19 @@ console.log(nextCrazyCase);
 const theNextCrazyCase = crazyCase('you')
 console.log(theNextCrazyCase);
 
-function ciEmailify() {
+function ciEmailify(str) {
+  let newStr= ''
+  str = str.toLowerCase()
+  for (i=0; i<str.length; i++) {
+    if (str[i] === " ") {
+      newStr = newStr + '.'
+    } else {
+      newStr = newStr + str[i]
+    }
+    }
+  return newStr + '@codeimmersives.com'
+  }
 
-  
-}
 
 
 function exclaim(str) {
